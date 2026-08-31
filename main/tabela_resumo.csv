@@ -1,0 +1,4 @@
+config,execucoes,taxa_inversao_%,tau_medio,tau_std,%_tau_perfeito
+1 nucleo(s),300,7.9,0.891,0.192,0.0
+2 nucleo(s),300,22.1,0.583,0.249,0.0
+4 nucleo(s),300,45.8,0.245,0.251,0.0
