@@ -108,20 +108,6 @@ def main():
             rotulo=f"{g} nucleo(s)" if g != "unico" else "execucao unica (sem comparacao)"
         ))
 
-    # --- Tabela resumo final -------------------------------------------------
-    print("\n########## Tabela resumo (para o artigo) ##########")
-    tabela = pd.DataFrame([{
-        "config": r["rotulo"],
-        "execucoes": r["n_execucoes"],
-        "taxa_inversao_%": round(r["taxa_inversao_media"] * 100, 1),
-        "tau_medio": round(r["tau_medio"], 3),
-        "tau_std": round(r["tau_std"], 3),
-        "%_tau_perfeito": round(r["pct_tau_perfeito"] * 100, 1),
-    } for r in resumo])
-    print(tabela.to_string(index=False))
-    tabela.to_csv("tabela_resumo.csv", index=False)
-    print("\nTabela salva em tabela_resumo.csv")
-
     # --- Grafico comparativo --------------------------------------------------
     if len(resumo) > 1:
         fig, axes = plt.subplots(1, 2, figsize=(10, 4))

@@ -7,8 +7,6 @@
 // N = numero de filhos por execucao. Ajuste aqui se quiser testar outros tamanhos.
 #define N 8
 
-// ITER = tamanho da carga de trabalho de CPU identica para todo filho.
-// Ajuste conforme a velocidade da sua CPU para o filho levar ~5-15ms.
 #define ITER 20000000ULL
 
 static double now_ms(void) {
@@ -17,10 +15,6 @@ static double now_ms(void) {
     return ts.tv_sec * 1000.0 + ts.tv_nsec / 1e6;
 }
 
-// Carga de trabalho identica (mesmo numero de iteracoes) para TODOS os filhos.
-// Isso e importante: nao ha vantagem/desvantagem artificial ligada ao indice de criacao.
-// Qualquer diferenca no tempo de termino vem so do sistema (escalonador, fork overhead,
-// contencao de CPU/cache), nao de uma decisao deliberada do programa.
 static void carga_trabalho(void) {
     volatile unsigned long long acc = 0;
     for (unsigned long long i = 0; i < ITER; i++) {
