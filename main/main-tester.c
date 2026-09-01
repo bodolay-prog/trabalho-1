@@ -4,7 +4,7 @@
 #include <sys/wait.h>
 #include <time.h>
 
-// N = numero de filhos por execucao. Ajuste aqui se quiser testar outros tamanhos.
+// N = numero de filhos por execucao
 #define N 8
 
 #define ITER 20000000ULL
