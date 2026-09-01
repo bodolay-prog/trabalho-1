@@ -4,7 +4,7 @@ Trabalho de S.O sobre fork e wait
 
 Seguindo a hipótese dada:
 
-" A ordem em que os processos filhos s ̃ao criados influencia a ordem em que eles ser ̃ao
+" A ordem em que os processos filhos são criados influencia a ordem em que eles ser ̃ao
 executados e terminar ̃ao. Consequentemente, ao utilizar wait(), o processo pai tender ́a a receber
 os filhos na mesma ordem em que foram criados. "
 
